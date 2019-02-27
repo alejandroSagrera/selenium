@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="21985" started-at="2019-02-27T20:25:53Z" finished-at="2019-02-27T20:26:15Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="21985" started-at="2019-02-27T20:25:53Z" finished-at="2019-02-27T20:26:15Z">
+      <class name="entregaFinal.LoginTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:entregaFinal.LoginTest@3abbfa04]" name="setUp" is-config="true" duration-ms="8210" started-at="2019-02-27T20:25:54Z" finished-at="2019-02-27T20:26:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testLoginOk(java.lang.String, java.lang.String)[pri:1, instance:entregaFinal.LoginTest@3abbfa04]" name="testLoginOk" duration-ms="2910" started-at="2019-02-27T20:26:03Z" data-provider="testDataLogin" finished-at="2019-02-27T20:26:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[fraga@dispostable.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginOk -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:entregaFinal.LoginTest@3abbfa04]" name="tearDown" is-config="true" duration-ms="720" started-at="2019-02-27T20:26:06Z" finished-at="2019-02-27T20:26:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:entregaFinal.LoginTest@3abbfa04]" name="setUp" is-config="true" duration-ms="6310" started-at="2019-02-27T20:26:06Z" finished-at="2019-02-27T20:26:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testLoginNotOk(java.lang.String, java.lang.String)[pri:2, instance:entregaFinal.LoginTest@3abbfa04]" name="testLoginNotOk" duration-ms="2020" started-at="2019-02-27T20:26:13Z" data-provider="testDataIncorrectLogin" finished-at="2019-02-27T20:26:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ale2019@dispostable.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[4321]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginNotOk -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:entregaFinal.LoginTest@3abbfa04]" name="tearDown" is-config="true" duration-ms="770" started-at="2019-02-27T20:26:15Z" finished-at="2019-02-27T20:26:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- entregaFinal.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
