@@ -34,16 +34,16 @@ public class ExcelConfig {
 	public Object[][] readExcel() {
 		int rows = sh.getLastRowNum();
 		XSSFRow Row = sh.getRow(0);
-		int RowNum = sh.getPhysicalNumberOfRows();// count my number of Rows
-		int ColNum = Row.getLastCellNum(); // get last ColNum
+		int RowNum = sh.getPhysicalNumberOfRows();//cuento mi número de filas
+		int ColNum = Row.getLastCellNum(); //obtengo la última columna
 		Object data[][] = new Object[RowNum - 1][ColNum];
 		DataFormatter format = new DataFormatter();
 		try {
-			for (int i = 0; i < RowNum - 1; i++) // Loop work for filas
+			for (int i = 0; i < RowNum - 1; i++) //loop filas
 			{
 				XSSFRow row = sh.getRow(i + 1);
 
-				for (int j = 0; j < ColNum; j++) // Loop work for columnas
+				for (int j = 0; j < ColNum; j++) //loop columnas
 				{
 					if (row == null)
 						data[i][j] = "";

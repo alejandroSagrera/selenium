@@ -5,7 +5,7 @@ import org.junit.runner.RunWith;
 import org.testng.AssertJUnit;
 import org.testng.annotations.DataProvider;
 import Utilities.ExcelConfig;
-
+import entregaFinal.BaseTest;
 import junitparams.JUnitParamsRunner;
 
 @RunWith(JUnitParamsRunner.class)

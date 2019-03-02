@@ -2,7 +2,7 @@ package entregaFinal;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
+import entregaFinal.BaseTest;
 import Utilities.ExcelConfig;
 import org.junit.runner.RunWith;
 import org.testng.AssertJUnit;
