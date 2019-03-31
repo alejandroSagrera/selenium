@@ -7,7 +7,10 @@ import java.util.Iterator;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.CellValue;
 import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.ss.usermodel.FormulaEvaluator;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -31,29 +34,52 @@ public class ExcelConfig {
 		}
 	}
 
+	@SuppressWarnings("incomplete-switch")
 	public Object[][] readExcel() {
-		int rows = sh.getLastRowNum();
 		XSSFRow Row = sh.getRow(0);
-		int RowNum = sh.getPhysicalNumberOfRows();//cuento mi número de filas
-		int ColNum = Row.getLastCellNum(); //obtengo la última columna
+		int RowNum = sh.getPhysicalNumberOfRows();// cuento mi número de filas
+		int ColNum = Row.getLastCellNum(); // obtengo la última columna
 		Object data[][] = new Object[RowNum - 1][ColNum];
 		DataFormatter format = new DataFormatter();
+		FormulaEvaluator evaluator = wb.getCreationHelper().createFormulaEvaluator();
+		evaluator.evaluateAll();
 		try {
-			for (int i = 0; i < RowNum - 1; i++) //loop filas
+			for (int i = 0; i < RowNum - 1; i++) // loop filas
 			{
 				XSSFRow row = sh.getRow(i + 1);
 
-				for (int j = 0; j < ColNum; j++) //loop columnas
+				for (int j = 0; j < ColNum; j++) // loop columnas
 				{
 					if (row == null)
 						data[i][j] = "";
 					else {
-						XSSFCell cell = row.getCell(j);
+						Cell cell = row.getCell(j);
 						if (cell == null)
 							data[i][j] = "";
 						else {
-							String value = format.formatCellValue(cell);
-							data[i][j] = value;
+							CellValue cellValue = evaluator.evaluate(cell);
+							CellType cellType = cell.getCellType();
+							switch (cellType) {
+							case BOOLEAN:
+								data[i][j] = cell.getBooleanCellValue();
+								break;
+							case NUMERIC:
+								data[i][j] = cell.getNumericCellValue();
+								break;
+							case STRING:
+								data[i][j] = cell.getStringCellValue();
+								break;
+							case BLANK:
+								break;
+							case ERROR:
+								break;
+							case FORMULA:
+								data[i][j] = cellValue.getStringValue();
+								break;
+							}
+							/*
+							 * String value = format.formatCellValue(cell); data[i][j] = value;
+							 */
 						}
 					}
 				}
@@ -64,4 +90,5 @@ public class ExcelConfig {
 
 		return data;
 	}
+
 }

@@ -1,61 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="21985" started-at="2019-02-27T20:25:53Z" finished-at="2019-02-27T20:26:15Z">
+  <suite name="Default suite" duration-ms="785" started-at="2019-03-25T21:57:15Z" finished-at="2019-03-25T21:57:15Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="21985" started-at="2019-02-27T20:25:53Z" finished-at="2019-02-27T20:26:15Z">
-      <class name="entregaFinal.LoginTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:entregaFinal.LoginTest@3abbfa04]" name="setUp" is-config="true" duration-ms="8210" started-at="2019-02-27T20:25:54Z" finished-at="2019-02-27T20:26:03Z">
+    <test name="Default test" duration-ms="785" started-at="2019-03-25T21:57:15Z" finished-at="2019-03-25T21:57:15Z">
+      <class name="entregaFinal.RegisterTest">
+        <test-method status="FAIL" signature="testRegisterOk(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:entregaFinal.RegisterTest@4cf777e8]" name="testRegisterOk" duration-ms="773" started-at="2019-03-25T21:57:15Z" data-provider="testDataRegister" finished-at="2019-03-25T21:57:15Z">
+          <exception class="org.testng.internal.reflect.MethodMatcherException">
+            <message>
+              <![CDATA[
+Data provider mismatch
+Method: testRegisterOk([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=4, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=5, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=6, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=7, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=8, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=9, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=10, type=java.lang.String, declaredAnnotations=[]}])
+Arguments: [(java.lang.String) Miguel,(java.lang.String) hans,(java.lang.String) hans991@dispostable.com,(java.lang.Double) 9.9362533E7,(java.lang.String) Rondeau 1843,(java.lang.String) Montevideo,(java.lang.Double) 18800.0,(java.lang.String) Uruguay,(java.lang.String) Montevideo,(java.lang.Double) 1234.0,(java.lang.Double) 1234.0]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.internal.reflect.MethodMatcherException: 
+Data provider mismatch
+Method: testRegisterOk([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=4, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=5, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=6, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=7, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=8, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=9, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=10, type=java.lang.String, declaredAnnotations=[]}])
+Arguments: [(java.lang.String) Miguel,(java.lang.String) hans,(java.lang.String) hans991@dispostable.com,(java.lang.Double) 9.9362533E7,(java.lang.String) Rondeau 1843,(java.lang.String) Montevideo,(java.lang.Double) 18800.0,(java.lang.String) Uruguay,(java.lang.String) Montevideo,(java.lang.Double) 1234.0,(java.lang.Double) 1234.0]
+at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:45)
+at org.testng.internal.Parameters.injectParameters(Parameters.java:796)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:983)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.internal.reflect.MethodMatcherException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testLoginOk(java.lang.String, java.lang.String)[pri:1, instance:entregaFinal.LoginTest@3abbfa04]" name="testLoginOk" duration-ms="2910" started-at="2019-02-27T20:26:03Z" data-provider="testDataLogin" finished-at="2019-02-27T20:26:06Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[fraga@dispostable.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1234]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLoginOk -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:entregaFinal.LoginTest@3abbfa04]" name="tearDown" is-config="true" duration-ms="720" started-at="2019-02-27T20:26:06Z" finished-at="2019-02-27T20:26:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:entregaFinal.LoginTest@3abbfa04]" name="setUp" is-config="true" duration-ms="6310" started-at="2019-02-27T20:26:06Z" finished-at="2019-02-27T20:26:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testLoginNotOk(java.lang.String, java.lang.String)[pri:2, instance:entregaFinal.LoginTest@3abbfa04]" name="testLoginNotOk" duration-ms="2020" started-at="2019-02-27T20:26:13Z" data-provider="testDataIncorrectLogin" finished-at="2019-02-27T20:26:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ale2019@dispostable.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[4321]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLoginNotOk -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:entregaFinal.LoginTest@3abbfa04]" name="tearDown" is-config="true" duration-ms="770" started-at="2019-02-27T20:26:15Z" finished-at="2019-02-27T20:26:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- entregaFinal.LoginTest -->
+        </test-method> <!-- testRegisterOk -->
+      </class> <!-- entregaFinal.RegisterTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
