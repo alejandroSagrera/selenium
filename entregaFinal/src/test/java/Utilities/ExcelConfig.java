@@ -77,9 +77,6 @@ public class ExcelConfig {
 								data[i][j] = cellValue.getStringValue();
 								break;
 							}
-							/*
-							 * String value = format.formatCellValue(cell); data[i][j] = value;
-							 */
 						}
 					}
 				}
