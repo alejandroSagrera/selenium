@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="entregaFinal.RegisterTest">
+      <class name="entregaFinal.LoginTest">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="testRegisterOk"/>
+          <include name="testLoginOk" invocation-numbers="0"/>
         </methods>
-      </class> <!-- entregaFinal.RegisterTest -->
+      </class> <!-- entregaFinal.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

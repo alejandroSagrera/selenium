@@ -60,11 +60,8 @@ public class ExcelConfig {
 							CellValue cellValue = evaluator.evaluate(cell);
 							CellType cellType = cell.getCellType();
 							switch (cellType) {
-							case BOOLEAN:
-								data[i][j] = cell.getBooleanCellValue();
-								break;
 							case NUMERIC:
-								data[i][j] = cell.getNumericCellValue();
+								data[i][j] = String.valueOf((int)cell.getNumericCellValue());
 								break;
 							case STRING:
 								data[i][j] = cell.getStringCellValue();
@@ -75,6 +72,9 @@ public class ExcelConfig {
 								break;
 							case FORMULA:
 								data[i][j] = cellValue.getStringValue();
+								break;
+							default:
+								data[i][j] = cell.getStringCellValue();
 								break;
 							}
 						}

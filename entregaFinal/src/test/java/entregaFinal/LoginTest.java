@@ -29,9 +29,14 @@ public class LoginTest extends BaseTest {
 	@Test
 	@DataProvider
 	public Object[][] testDataLogin() {
+		try {
 		ExcelConfig ex = new ExcelConfig("src/loginData.xlsx");
 		Object data[][] = ex.readExcel();
 		return data;
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			return null;
+		}
 	}
 	@Test
 	@DataProvider
